@@ -1,12 +1,13 @@
 /***
+    @min_list_price and @max_list_price are parameters with default
+    values and therefore are optional.
     EXECUTE uspFindProducts
-        @min_list_price = 900,
-        @max_list_price = 1000,
+        @min_list_price = 6000,
         @name = 'Trek';
 */
 ALTER PRECEDURE uspFindProducts(
-    @min_list_price AS DECIMAL,
-    @max_list_price AS DECIMAL,
+    @min_list_price AS DECIMAL = 0,
+    @max_list_price AS DECIMAL = 999999,
     @name AS VARCHAR(MAX)
 )
 AS
