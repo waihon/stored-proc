@@ -1,4 +1,4 @@
-CREATE PROCEDURE uspProductList
+ALTER PROCEDURE uspProductList
 AS
 BEGIN
     SELECT 
@@ -7,5 +7,5 @@ BEGIN
     FROM
         production.products
     ORDER BY
-        product_name;
+        list_price;
 END;
