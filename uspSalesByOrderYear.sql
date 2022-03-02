@@ -1,4 +1,4 @@
-CREATE PROCEDURE uspSalesByOrderYear(
+ALTER PROCEDURE uspSalesByOrderYear(
     @order_year INT
 )
 AS
@@ -18,5 +18,9 @@ BEGIN
     IF @sales > 1000000
     BEGIN
         PRINT 'Great! The sales amount in ' + @order_year + ' is greater than 1,000,000';
+    END
+    ELSE
+    BEGIN
+        PRINT 'Sales amount in ' + @order_year + ' did not reach 1,000,000';
     END;
 END;
