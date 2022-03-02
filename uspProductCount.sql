@@ -1,6 +1,8 @@
-CREATE PROCEDURE uspProductCount
+ALTER PROCEDURE uspProductCount
 AS
 BEGIN
+    SET NOCOUNT ON;
+
     DECLARE @product_count AS INT;
 
     SET @product_count = (
