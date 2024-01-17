@@ -10,7 +10,7 @@
 */
 ALTER PRECEDURE uspFindProducts(
     @min_list_price AS DECIMAL = 0,
-    @max_list_price AS DECIMAL = 999999,
+    @max_list_price AS DECIMAL = NULL,
     @name AS VARCHAR(MAX)
 )
 AS
